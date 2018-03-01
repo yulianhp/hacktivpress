@@ -8,15 +8,17 @@
       <div class="card-body">
         <div class="form-group">
       <label for="exampleInputEmail1">Username</label>
+      {{username}}
       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" style="" v-model="username">
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
+      {{password}}
       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" style="" v-model="password">
     </div>
     <div class="">
       <button type="button" class="btn btn-secondary" style="" v-if="register" @click="registerUser">Register</button>
-      <button type="button" class="btn btn-secondary" style="float:left;" v-else  @click="logSwitch">Register</button>
+      <button type="button" class="btn btn-secondary" style="float:left;" v-else  @click="logSwitch">New User</button>
       <button type="button" class="btn btn-secondary" style="float:right;" v-if="!register" >Sign In</button>
       <h4 v-if="registered">Please sign in with your credential</h4>
     </div>
@@ -56,7 +58,7 @@ export default {
         username: this.username,
         password: this.password
       }
-      this.$axios.post(`users/signUp`, input)
+      this.$axios.post(`users/signup`, input)
         .then(result => {
           console.log(result)
           this.setNull()

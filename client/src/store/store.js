@@ -8,8 +8,23 @@ const http = axios.create({
 })
 
 export const store = new Vuex.Store({
-  state: { },
+  state: {
+    articles: []
+  },
+  mutations: {
+    allArticles (state, payload) {
+      state.articles = payload
+    }
+  },
   actions: {
-    
+    getAllArticles (context) {
+      http.get('articles')
+      .then(result => {
+        console.log(result);
+        context.commit('allArticles', result.data.articles)
+      }).catch(err => {
+        console.log(err);
+      })
+    }
   }
 })
