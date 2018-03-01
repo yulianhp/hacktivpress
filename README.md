@@ -11,7 +11,6 @@ How-to:
 | ----------------------------- |:-------------:| --------------------------------|
 | /api/users/signin             | POST          | login for user                  |
 | /api/users/signup             | POST          | register new user               |
-| /api/users/signout            | GET           | logout from app                 |
 | /api/articles/                | GET           | show list of all articles       |
 | /api/articles/                | POST          | post new article                |
 | /api/articles/user/:id        | GET           | show list of user's articles    |
