@@ -7,7 +7,7 @@ const userSchema = new Schema({
     type: String,
     required: [true, "need username"],
     unique: [true, "username already taken"]
-  }
+  },
   password: {
     type: String,
     required: [true, "need password"]
