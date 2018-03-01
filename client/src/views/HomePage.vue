@@ -3,7 +3,7 @@
     <Navbar/>
     <div class="container" style="margin-top:3%;">
       <div class="row">
-        <ArticleList/>
+        <router-view/>
       </div>
     </div>
   </div>
@@ -11,14 +11,15 @@
 
 <script>
 import Navbar from '@/components/Navbar'
-import ArticleList from '@/views/ArticleList'
 export default {
   name: 'HomePage',
   components: {
-    Navbar, ArticleList
+    Navbar
   },
   created () {
     this.$store.dispatch('getAllArticles')
+    this.$store.dispatch('getNewsArticles')
+    this.$store.dispatch('getReviewsArticles')  
   }
 }
 </script>

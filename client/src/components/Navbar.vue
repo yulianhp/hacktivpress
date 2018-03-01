@@ -10,10 +10,13 @@
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">News <span class="sr-only">(current)</span></a>
+        <router-link :to="{ path: '/news'}" class="nav-link"><span class="sr-only">(current)</span>
+          News
+        </router-link>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Reviews</a>
+        <router-link :to="{ path: '/reviews'}" class="nav-link">Reviews
+        </router-link>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">My Articles</a>
