@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/hacktivpress');
+require('dotenv').config()
 
 const users = require('./routes/users');
 const articles = require('./routes/articles');

@@ -14,7 +14,7 @@ const articleSchema = new Schema({
   category: {
     type: String,
     enum: ['news','review']
-  }
+  },
   author: {
     type: Schema.Types.ObjectId,
     ref: 'User'
