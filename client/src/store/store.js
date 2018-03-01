@@ -8,5 +8,8 @@ const http = axios.create({
 })
 
 export const store = new Vuex.Store({
-  state: { }
+  state: { },
+  actions: {
+    
+  }
 })
